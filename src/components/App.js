@@ -4,7 +4,7 @@ import Search from "./Search/Search";
 import Results from "./Results/Results";
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState("Default search");
+  const [searchValues, setSearchValues] = useState([]);
   return (
     <Router>
       <div>
@@ -12,10 +12,10 @@ const App = () => {
                 renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/results">
-            <Results searchTerm={searchTerm} />
+            <Results searchValues={searchValues} />
           </Route>
           <Route path="/">
-            <Search setSearchTerm={setSearchTerm} />
+            <Search setSearchValues={setSearchValues} />
           </Route>
         </Switch>
       </div>

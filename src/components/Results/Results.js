@@ -9,7 +9,11 @@ const Results = (props) => {
     <div>
       <div> Results Page</div>
       <button onClick={backToSearch}>back to search</button>
-      <div>{props.searchTerm}</div>
+      <ul>
+        {props.searchValues.map((item) => {
+          return <li key={item}> {item}</li>;
+        })}
+      </ul>
     </div>
   );
 };
