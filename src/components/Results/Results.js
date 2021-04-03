@@ -8,6 +8,10 @@ const Results = (props) => {
   const history = useHistory();
   const backToSearch = useCallback(() => history.push("/"), [history]);
 
+  const isYoutube = true;
+
+  const youtubeBaseURL = "https://www.youtube.com/results?search_query=";
+
   // const recipes = props.recipes.results;
 
   // const hasProducts = recipes ? recipes.length > 0 : false;
@@ -24,17 +28,26 @@ const Results = (props) => {
   return (
     <div>
       {!loading && (
-        <div>
-          <div> Results Page</div>
-          <button onClick={backToSearch}>back to search</button>
+        <div className="page-wrapper">
+          <div className="header-wrapper">
+            <p className="results-page">Results Page</p>
+            <button onClick={backToSearch}>
+              <p>New Search</p>
+            </button>
+          </div>
           <ul className="container">
             {props.recipes.results.map((item) => {
               return (
                 <li key={item.href} className="card">
-                  <div className="card-container">
-                    <p className="recipe-title">{item.title}</p>
-                    <img src={item.thumbnail} className="receipe-img" />
-                  </div>
+                  <a
+                    href={youtubeBaseURL + item.title.replace(/ /g, "+")}
+                    target="blank"
+                  >
+                    <div className="card-container">
+                      <p className="recipe-title">{item.title}</p>
+                      <img src={item.thumbnail} className="receipe-img" />
+                    </div>
+                  </a>
                 </li>
               );
             })}
