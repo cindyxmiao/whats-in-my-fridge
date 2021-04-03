@@ -9,7 +9,13 @@ const Search = (props) => {
 
   const handleOnClick = useCallback(() => {
     history.push("/results");
-    props.setSearchValues(searchList);
+    if (searchValue) {
+      setSearchList(searchList.concat(searchValue));
+      setSearchValue("");
+      props.setSearchValues(searchList.concat(searchValue));
+    } else {
+      props.setSearchValues(searchList);
+    }
   }, [history, props, searchValue]);
 
   const handleInputChange = (event) => {
