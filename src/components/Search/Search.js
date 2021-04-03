@@ -16,7 +16,7 @@ const Search = (props) => {
     } else {
       props.setSearchValues(searchList);
     }
-  }, [history, props, searchValue]);
+  }, [history, props, searchValue, searchList]);
 
   const handleInputChange = (event) => {
     setSearchValue(event.target.value);

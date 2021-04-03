@@ -27,9 +27,16 @@ const Results = (props) => {
         <div>
           <div> Results Page</div>
           <button onClick={backToSearch}>back to search</button>
-          <ul>
+          <ul className="container">
             {props.recipes.results.map((item) => {
-              return <li key={item.href}> {item.title}</li>;
+              return (
+                <li key={item.href} className="card">
+                  <div className="card-container">
+                    <p className="recipe-title">{item.title}</p>
+                    <img src={item.thumbnail} className="receipe-img" />
+                  </div>
+                </li>
+              );
             })}
           </ul>
         </div>
