@@ -10,10 +10,16 @@ const App = () => {
 
   const [recipesState, setRecipesState] = useState([]);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     console.log("searchValueChanged!");
     console.log(searchValues);
+    if (!searchValues?.length) {
+      return;
+    }
     const ingridents = searchValues.toString();
+    setLoading(true);
 
     fetch(corsProxy + recipePuppyAPI + "i=" + ingridents + "&p=1", {
       headers: {
@@ -24,6 +30,7 @@ const App = () => {
       .then((recipesArray) => {
         console.log(recipesArray);
         setRecipesState(recipesArray);
+        setLoading(false);
       });
   }, [searchValues]);
 
@@ -34,7 +41,11 @@ const App = () => {
                 renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/results">
-            <Results searchValues={searchValues} recipes={recipesState} />
+            {loading ? (
+              "loading"
+            ) : (
+              <Results searchValues={searchValues} recipes={recipesState} />
+            )}
           </Route>
           <Route path="/">
             <Search setSearchValues={setSearchValues} />
