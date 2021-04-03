@@ -30,9 +30,9 @@ const Results = (props) => {
       {!loading && (
         <div className="page-wrapper">
           <div className="header-wrapper">
-            <p className="results-page">Results Page</p>
-            <button onClick={backToSearch}>
-              <p>New Search</p>
+            <h3>Results Page</h3>
+            <button className="back-to-search" onClick={backToSearch}>
+              <p style={{ color: "white" }}>New Search</p>
             </button>
           </div>
           <ul className="container">

@@ -1,0 +1,52 @@
+input {
+  border: none;
+  width: 30rem;
+  height: 1.4rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: #92abdd;
+  border-style: solid;
+  border-color: white;
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.search-card {
+  background-color: dodgerblue;
+  border-style: solid;
+  border-color: white;
+  background-color: rgb(206 210 219);
+  border-width: 0.2rem;
+  /* color: white; */
+  padding: 0.5rem;
+  height: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.search-card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+button {
+  height: 2rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-style: dashed;
+  border-color: white;
+  background-color: rgb(58 41 13);
+}

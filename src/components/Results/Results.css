@@ -5,9 +5,6 @@
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.results-page {
-  color: rgb(206 210 219);
-}
 
 a {
   text-decoration: none;
@@ -19,17 +16,8 @@ p {
   text-align: center;
 }
 
-ul {
-  list-style: none;
-}
-
-button {
-  background-color: rgb(233 183 100);
-  border: none;
-  text-align: center;
-  /* padding: 0.5rem; */
+.back-to-search {
   margin-left: 1rem;
-  border-radius: 0.1rem;
 }
 .card {
   /* background-color: dodgerblue; */
@@ -65,7 +53,8 @@ button {
   display: flex;
   flex-direction: row;
   /* justify-content: space-between; */
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   margin-bottom: 1rem;
 }

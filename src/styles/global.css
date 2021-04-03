@@ -6,3 +6,15 @@ body {
   padding: 1rem;
   background-color: rgb(58 41 13);
 }
+
+h1,
+h2,
+h3 {
+  color: rgb(206 210 219);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
