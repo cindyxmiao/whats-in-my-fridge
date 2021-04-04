@@ -74,6 +74,8 @@ const Results = (props) => {
                     <div className="card-container">
                       <p className="recipe-title">{item.title}</p>
                       <img
+                        crossOrigin="anonymous"
+                        referrerPolicy="origin"
                         src={props.proxy + item.thumbnail}
                         className="receipe-img"
                       />
