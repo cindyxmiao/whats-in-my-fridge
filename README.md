@@ -1,11 +1,10 @@
-# Fridgy
+# [Fridgy](https://fridgy-app-comm280.herokuapp.com/)
 
-1. Enter ingredients in your fridge
+## Enter the ingredients in your fridge & press search
 ![Search page](/read_me_pics/search_screen.PNG)
-2. Press search 
-3. Pick a recipe
+## Pick a recipe
 ![Results page](/read_me_pics/results_screen.PNG) 
-4. Toggle for Youtube or website results
+## Toggle for Youtube or web results
 ![Youtube Toggle](/read_me_pics/youtube_toggle.PNG) 
 
 Recipe search results provided by [Recipe Puppy API](http://www.recipepuppy.com/about/api/)
