@@ -45,7 +45,11 @@ const App = () => {
             {loading ? (
               <Loading type="bars" color="white" />
             ) : (
-              <Results searchValues={searchValues} recipes={recipesState} />
+              <Results
+                searchValues={searchValues}
+                recipes={recipesState}
+                proxy={corsProxy}
+              />
             )}
           </Route>
           <Route path="/">

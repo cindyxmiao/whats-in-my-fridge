@@ -73,7 +73,10 @@ const Results = (props) => {
                   >
                     <div className="card-container">
                       <p className="recipe-title">{item.title}</p>
-                      <img src={item.thumbnail} className="receipe-img" />
+                      <img
+                        src={props.proxy + item.thumbnail}
+                        className="receipe-img"
+                      />
                     </div>
                   </a>
                 </li>
