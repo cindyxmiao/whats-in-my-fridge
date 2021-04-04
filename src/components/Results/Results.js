@@ -48,13 +48,13 @@ const Results = (props) => {
                 <div style={{ marginRight: "1rem", color: "white" }}>
                   Youtube results
                 </div>
-                <label class="switch">
+                <label className="switch">
                   <input
                     type="checkbox"
                     className="input"
                     onClick={handleToggle}
                   ></input>
-                  <span class="slider round"></span>
+                  <span className="slider round"></span>
                 </label>
               </div>
             </div>
@@ -80,6 +80,14 @@ const Results = (props) => {
               );
             })}
           </ul>
+          <div>
+            <p className="recipe-puppy-link" style={{ color: "white" }}>
+              Search results provided by{" "}
+              <a href="http://www.recipepuppy.com/about/api/">
+                Recipe Puppy API
+              </a>
+            </p>
+          </div>
         </div>
       )}
     </div>

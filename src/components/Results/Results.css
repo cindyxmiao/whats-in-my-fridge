@@ -8,7 +8,9 @@
 
 a {
   text-decoration: none;
+  color: #9e63d5;
 }
+
 p {
   margin: 0;
   font-weight: 600;
@@ -16,15 +18,12 @@ p {
   text-align: center;
 }
 
-.toggle-container {
-  /* background-color: dodgerblue; */
-}
-
 .back-to-search {
   margin-left: 1rem;
+  border-color: #9e63d5;
 }
+
 .card {
-  /* background-color: dodgerblue; */
   border-style: solid;
   border-color: white;
   background-color: rgb(206 210 219);
@@ -78,6 +77,8 @@ p {
   }
 }
 
+/* toggle switch from https://www.w3schools.com/howto/howto_css_switch.asp */
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -119,11 +120,11 @@ p {
 }
 
 .input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #9e63d5;
 }
 
 .input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #9e63d5;
 }
 
 .input:checked + .slider:before {
@@ -139,4 +140,9 @@ p {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.recipe-puppy-link {
+  font-size: 0.7rem;
+  margin-top: 1rem;
 }

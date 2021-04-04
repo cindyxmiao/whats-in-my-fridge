@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Search from "./Search/Search";
 import Results from "./Results/Results";
+import Loading from "./Loading";
 
 const App = () => {
   const [searchValues, setSearchValues] = useState([]);
@@ -42,7 +43,7 @@ const App = () => {
         <Switch>
           <Route path="/results">
             {loading ? (
-              "loading"
+              <Loading type="bars" color="white" />
             ) : (
               <Results searchValues={searchValues} recipes={recipesState} />
             )}
